@@ -1,9 +1,10 @@
 @echo on
 REM Build signed setups for 7-Zip ZS /TR
 
+set /p APPVEYOR_BUILD_FOLDER=".."
 SET COPTS=-m0=lzma -mx9 -ms=on -mf=bcj2
 SET VERSION=19.00
-SET WD=%cd%
+SET WD=%APPVEYOR_BUILD_FOLDER%
 SET X32=%WD%\bin-12.0-x32
 SET X64=%WD%\bin-12.0-x64
 SET ARM=%WD%\bin-12.0-arm

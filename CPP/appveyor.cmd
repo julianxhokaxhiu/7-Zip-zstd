@@ -15,6 +15,7 @@ REM WINDOWS     5.01 (x86) 5.02 (x64) 6.02 (ARM)     6.00 (x86, x64) 6.02 (ARM)
 
 
 REM to many vcvarsall.cmd calls will blow it up!
+set /p APPVEYOR_BUILD_FOLDER=".."
 set OPATH=%PATH%
 set ERRFILE=%APPVEYOR_BUILD_FOLDER%\error.txt
 cd %APPVEYOR_BUILD_FOLDER%\CPP

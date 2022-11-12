@@ -1,5 +1,6 @@
 @echo off
 
+set /p APPVEYOR_BUILD_FOLDER=".."
 set ROOT=%cd%\7zip
 set OUTDIR=%APPVEYOR_BUILD_FOLDER%\bin-%VC%-%PLATFORM%
 set ERRFILE=%APPVEYOR_BUILD_FOLDER%\bin-%VC%-%PLATFORM%.log
